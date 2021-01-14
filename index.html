@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Mars Rover</title>
+  </head>
+  <body>
+    <h1>Mars Rover</h1>
+   <section class="middle">
+   <div class="gameBoard">
+    <div class="empty-space"></div>
+     <div class="row">
+       <div class="x-axis"></div>
+      <div class="x-axis">0</div>
+      <div class="x-axis">1</div>
+      <div class="x-axis">2</div>
+      <div class="x-axis">3</div>
+      <div class="x-axis">4</div>
+      <div class="x-axis">5</div>
+      <div class="x-axis">6</div>
+      <div class="x-axis">7</div>
+      <div class="x-axis">8</div>
+      <div class="x-axis">9</div>
+    </div>
+   <div class="grid">
+    <div class="column">
+        <div class="y-axis">0</div>
+      <div class="y-axis">1</div>
+      <div class="y-axis">2</div>
+      <div class="y-axis">3</div>
+      <div class="y-axis">4</div>
+      <div class="y-axis">5</div>
+      <div class="y-axis">6</div>
+      <div class="y-axis">7</div>
+      <div class="y-axis">8</div>
+      <div class="y-axis">9</div>
+      </div>
+     <div class="terrain">
+    <div class="row">
+      <div class="box" id="0_0"><img src="https://image.flaticon.com/icons/png/512/124/124544.png" id="rover"></div>
+      <div class="box" id="1_0"></div>
+      <div class="box" id="2_0"></div>
+      <div class="box" id="3_0"></div>
+      <div class="box" id="4_0"></div>
+      <div class="box" id="5_0"></div>
+      <div class="box" id="6_0"></div>
+      <div class="box" id="7_0"></div>
+      <div class="box" id="8_0"></div>
+      <div class="box" id="9_0"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+     </div>
+     
+    </div>
+    </div>
+     <div class="log1" id="status">
+     ==Rover Status==
+     <div class="log2" id="log">
+       ==Terminal Log==
+       
+       </div>
+       </div>
+    </section>
+  </body>
+  <div class="slot-form">
+     <label for="text">Remote Terminal:  </label>
+        <input type="text" name="roverPath"        id="commandList" placeholder="Beep..boop...what do?">
+    <button onclick="setCommandList()" id="start">Submit</button>
+  </div>
+    <div class="explanation">
+  <p>Mission Control wants us to test out the new rover. The rover can only move forward and backward. To change direction you'll have to tell it to turn left or right first and then tell it to move forward.
+    <br>
+  <br>
+  Enter your commands into the remote terminal above.
+    <br>
+  <br>
+  The robot only accepts four different commands f,b,r,l.
+    <br>
+  <br>
+  Example: rfflffbff
+  </p>
+  </div>
+</html>
